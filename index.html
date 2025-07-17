@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert business consulting services to help your organization grow and succeed">
+    <title>Strategic Consulting Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #00274D;
+            --primary-white: #FFFFFF;
+            --secondary-gray: #F5F5F5;
+            --accent-gold: #FFD700;
+            --text-dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--primary-white);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .cta-button {
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,39,77,0.8), rgba(0,39,77,0.8)), url('https://picsum.photos/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--primary-white);
+            padding: 0 5%;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .services {
+            padding: 5rem 5%;
+            background: var(--secondary-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--primary-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team {
+            padding: 5rem 5%;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .testimonials {
+            background: var(--primary-blue);
+            color: var(--primary-white);
+            padding: 5rem 5%;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .footer {
+            background: var(--text-dark);
+            color: var(--primary-white);
+            padding: 5rem 5%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">SCS</div>
+        <nav class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#team">Team</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering Your Business with Expert Insights</h1>
+            <p>Transform your organization with strategic solutions tailored to your needs</p>
+            <a href="#contact" class="cta-button">Discover Our Approach</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Strategic Planning</h3>
+                <p>Develop comprehensive business strategies to achieve your organizational goals and maximize growth potential.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Transformation</h3>
+                <p>Navigate the digital landscape with innovative solutions that modernize your operations and enhance efficiency.</p>
+            </div>
+            <div class="service-card">
+                <h3>Market Analysis</h3>
+                <p>Gain valuable insights into market trends, competitor analysis, and customer behavior to inform decision-making.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <h2>Our Experts</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://picsum.photos/200" alt="Team member">
+                <h3>Sarah Johnson</h3>
+                <p>Strategic Director</p>
+            </div>
+            <div class="team-member">
+                <img src="https://picsum.photos/201" alt="Team member">
+                <h3>Michael Chen</h3>
+                <p>Digital Innovation Lead</p>
+            </div>
+            <div class="team-member">
+                <img src="https://picsum.photos/202" alt="Team member">
+                <h3>Emma Thompson</h3>
+                <p>Market Analysis Expert</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Client Success Stories</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Strategic Consulting Solutions transformed our business operations, leading to a 40% increase in efficiency."</p>
+                <h4>John Smith</h4>
+                <p>CEO, Tech Innovations</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Their expertise in digital transformation helped us stay ahead of the competition in a rapidly evolving market."</p>
+                <h4>Lisa Anderson</h4>
+                <p>Director, Global Solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Contact Us</h3>
+                <p>123 Business Avenue</p>
+                <p>New York, NY 10001</p>
+                <p>contact@scs.com</p>
+                <p>(555) 123-4567</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#services">Services</a></p>
+                <p><a href="#team">Team</a></p>
+                <p><a href="#testimonials">Testimonials</a></p>
+            </div>
+            <div>
+                <h3>Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="cta-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
